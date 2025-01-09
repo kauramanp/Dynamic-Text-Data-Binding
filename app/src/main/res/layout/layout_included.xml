@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="headingText"
+            type="String" />
+        <variable
+            name="subText"
+            type="String" />
+        <variable
+            name="cardColor"
+            type="String" />
+        <variable
+            name="buttonIcon"
+            type="String" />
+        <variable
+            name="buttonString"
+            type="String" />
+    </data>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_10"
+        android:paddingVertical="@dimen/dp_10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvHeading"
+            android:text="@{headingText}"
+            android:textColor="@color/black"
+            tools:text="@string/app_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSbText"
+            android:layout_marginTop="@dimen/dp_05"
+            android:text="@{subText}"
+            android:textColor="@color/black"
+            tools:text="@string/app_name"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{buttonString}"/>
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+</layout>
