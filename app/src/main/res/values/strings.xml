@@ -3,4 +3,7 @@
     <string name="heading_first">First Heading</string>
     <string name="heading_sub_first">First Sub Heading</string>
     <string name="heading_button_first">First Button Heading</string>
+    <string name="heading_second">Second Heading</string>
+    <string name="heading_sub_second">Second Sub Heading</string>
+    <string name="heading_button_second">Second Button Heading</string>
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="headingText"
@@ -13,14 +14,19 @@
             type="String" />
         <variable
             name="buttonIcon"
-            type="String" />
+            type="android.graphics.drawable.Drawable" />
         <variable
             name="buttonString"
             type="String" />
+        <variable
+            name="cardBackground"
+            type="String" />
+        <import type="android.graphics.Color"/>
     </data>
 <com.google.android.material.card.MaterialCardView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@{Color.parseColor(cardBackground)}">
     <LinearLayout android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +37,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvHeading"
             android:text="@{headingText}"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnBackground"
             tools:text="@string/app_name"/>
         <TextView
             android:layout_width="wrap_content"
@@ -45,6 +51,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableStart="@{buttonIcon}"
             android:text="@{buttonString}"/>
 
 
